@@ -1,0 +1,17 @@
+<div class="col-12">
+  <h2>Todos</h2>
+
+  <div class="card-body" *ngIf="!todos; else todoList">
+    <h3>Any todos not yet</h3>
+  </div>
+
+  <ng-template #todoList>
+    <ul class="todo-list list-unstyled">
+      <li *ngFor="let todo of todos; let i = index" [ngClass]="{'highlight': todo.completed}">
+        <span>{{i+1}}</span> <div>{{todo.title}}</div>
+      </li>
+    </ul>
+  </ng-template>
+
+
+</div>

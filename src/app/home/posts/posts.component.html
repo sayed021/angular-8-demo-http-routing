@@ -1,0 +1,10 @@
+<h2>Recent Posts</h2>
+
+<div class="card my-2"  *ngFor="let post of posts">
+  <div class="card-header text-capitilize">
+      {{post.title}}
+  </div>
+  <div class="card-body">
+    {{post.body}}
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<header class="container-fluid bg-light">
+  <div class="container py-5">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <a [routerLink]="['']"><img src="https://www.nuagerie.com/templates/nuagerie/assets/images/brand/bootstrap-vertical-300.png" alt="" width="250" ></a>
+        <div class="px-5 py-2">
+          <nav class="btn-group">
+            <a [routerLink]="['blog']" routerLinkActive="active" class="d-inline-block">Blog</a>
+            <a [routerLink]="['todo']" routerLinkActive="active" class="d-inline-block">Todos</a>
+          </nav>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-sm btn-danger rounded-circle"  (click)="logOut()">
+          <img src="http://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/system-log-out-icon.png" width="50" alt="Logout" />
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</section>
+
+
